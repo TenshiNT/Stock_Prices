@@ -8,8 +8,8 @@ import plotly.graph_objs as go
 import textract
 
 # Twilio
-SID = 'AC563302fc6d84aadc3a1a271dcc0fe021'
-Auth_Token = 'adce64312fdf3988fe2866c5f82cd993'
+SID = 'Your sid'
+Auth_Token = 'your token'
 cl = Client(SID, Auth_Token)
 
 # Crypto
@@ -68,5 +68,5 @@ body = textract.process(
 
 cl.messages.create(
     body=str(body).replace("Sent from your twilio trial account -b'", ""),
-    from_='+12057402754',
-    to='+48690232816')
+    from_='your twilio number',
+    to='your phone number')
